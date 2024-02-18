@@ -4,7 +4,6 @@ const startupSchema = new mongoose.Schema(
     {
         orgName: {
             type: String,
-            required: true
         },
         links: [
             {
