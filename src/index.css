@@ -1,3 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  background-color: #000814;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+}
+p {
+  font-weight: 300;
+  font-size: 24px;
+  color: white;
+}
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  .main_login {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    .form-row {
+      color: white;
+      text-align: start;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-rows: auto auto;
+      label {
+        font-size: larger;
+        margin-bottom: 10px;
+      }
+      input {
+        width: 25vw;
+        background-color: rgb(44 51 63);
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+      }
+    }
+  }
+}
+.log-in {
+  margin: auto;
+  /* display: flex; */
+  /* justify-content: end; */
+  padding-right: 20px;
+  color: yellow;
+}
+.btn {
+  width: auto;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+form {
+  width: fit-content;
+  margin: auto;
+}
+#col-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  div {
+    input {
+      width: 200px;
+    }
+  }
+}
+
+#col-3 {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 20px;
+  align-items: center;
+}
+
+/* GenderToggle.css */
+
+.gender-toggle {
+  display: flex;
+  cursor: pointer;
+  border-radius: 20px; /* Adjust the border-radius as needed */
+  overflow: hidden; /* Ensure the rounded corners are visible */
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 12px; /* Adjust the padding as needed */
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gender-toggle.male .toggle-option:nth-child(1),
+.gender-toggle.female .toggle-option:nth-child(2) {
+  background-color: #3490dc;
+  color: #fff;
+  border: 2px solid #3490dc;
+}
+
+.gender-toggle.female .toggle-option:nth-child(1),
+.gender-toggle.male .toggle-option:nth-child(2) {
+  background-color: black;
+  color: #fff;
+  border: 2px solid black;
+}
