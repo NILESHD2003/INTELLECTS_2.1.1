@@ -25,7 +25,9 @@ const Login = () => {
           <div>
             <span className=" text-white">Dont have an account ? </span>
             <button type="submit" className="log-in">
-              <li>{/* <Link to="/SignUp">Register</Link> */}</li>
+              <li>
+                <Link to="/SignUp">Register</Link>
+              </li>
             </button>
           </div>
         </form>

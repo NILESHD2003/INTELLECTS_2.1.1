@@ -11,10 +11,26 @@ h1 {
   color: white;
   font-weight: 700;
 }
+h3 {
+  font-size: 1.4rem;
+  color: white;
+}
 p {
   font-weight: 300;
   font-size: 24px;
   color: white;
+}
+span {
+  color: white;
+}
+.navbar {
+  ul {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    li {
+      width: 100%;
+    }
+  }
 }
 .Login {
   display: flex;
@@ -46,6 +62,24 @@ p {
     }
   }
 }
+.post_Outerbody {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Navbar {
+  height: fit-content;
+  width: fit-content;
+}
+.post_body {
+  display: grid;
+  width: 30vw;
+  text-align: start;
+  padding: 10px;
+  grid-template-rows: 1fr auto auto 1fr;
+}
 .log-in {
   margin: auto;
   /* display: flex; */
@@ -59,6 +93,13 @@ p {
   color: black;
   padding: 10px;
   border-radius: 20px;
+}
+btn:hover {
+  color: white;
+  background-color: rgb(135, 135, 61);
+}
+btn:focus {
+  background-color: yellow;
 }
 form {
   width: fit-content;
@@ -112,4 +153,44 @@ form {
   background-color: black;
   color: #fff;
   border: 2px solid black;
+}
+
+.body {
+  height: 200px;
+}
+
+.Post_body {
+  display: grid;
+  width: 500px;
+  grid-template-rows: auto auto 1fr;
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .body {
+    padding: 30px;
+    height: fit-content;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    input {
+      width: 70px;
+      margin: 0px 12px;
+      height: 50px;
+      background-color: grey;
+      border-radius: 20px;
+      /* background-color: #fff; */
+    }
+  }
 }
