@@ -6,6 +6,18 @@ const startupSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        links: [
+            {
+                platform: {
+                    type: String,
+                    trim: true
+                },
+                url: {
+                    type: String,
+                    trim: true
+                }
+            }
+        ],
         about: {
             type: String,
             trim: true

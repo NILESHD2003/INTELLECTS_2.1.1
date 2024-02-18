@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
+    contactNumber: {
+      type: String,
+      trim: true
+    },
     password: {
       type: String,
       required: true,
@@ -62,7 +66,7 @@ const userSchema = new mongoose.Schema(
             ref: "Post"
         }
     ],
-    additionalDetails: {
+    userDetails: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Profile"
     },

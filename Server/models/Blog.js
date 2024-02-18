@@ -9,7 +9,7 @@ const blogSchema = new mongoose.Schema({
   author: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    tirm: true
+    tirm: true,
   },
   image: [
     {
@@ -19,12 +19,12 @@ const blogSchema = new mongoose.Schema({
   content: {
     type: String,
     required: true,
-    tirm: true
+    tirm: true,
   },
   category: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category",
-    trim: true
+    trim: true,
   },
   tags: {
     type: [String],
