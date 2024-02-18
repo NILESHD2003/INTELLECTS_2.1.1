@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 const { cloudinaryConnect } = require('./config/cloudinary');
 const database = require('./config/database')
+const cookieParser = require("cookie-parser");
+const fileUpload = require("express-fileupload");
 
 dotenv.config();
 
