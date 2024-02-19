@@ -27,7 +27,7 @@ def recommend_blogs(blog_id, similarity_matrix, k=10):
     recommended_blogs = [{"blog_id": blogs[i]["_id"], "createdAt": blogs[i]["createdAt"]} for i in similar_indices]
     return sorted(recommended_blogs, key=lambda x: x["createdAt"], reverse=True)
 
-@app.route('/recommendations', methods=['POST'])
+@app.route('/api/v1/auth/category/recommendations', methods=['POST'])
 def get_recommendations():
     data = request.json
     blog_id = data.get('blog_id')
