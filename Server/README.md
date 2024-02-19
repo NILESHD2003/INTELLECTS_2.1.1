@@ -2,10 +2,11 @@
 This Project can be locally hosted by setting up the project Dependencies.
 
 # Setting up Project
-* cd to `Server` folder
-* Run `npm run start` this will install all required libraries
-* To Start Server run commmand `npm run dev`
-* Server will now run on `PORT: 4000` or `8000`
+* cd to `Server` folder.
+* Run `npm install` this will install all required libraries.
+* Before executing `Backend Service` a `.env` file must be created in same folder.
+* To Start Server run commmand `npm run dev`.
+* Server will now run on `PORT: 4000` or `8000`.
 
 # To add enviroment variables add variables to .env file
 * We need to add PORT number at which the service endpoints will be  exposed `PORT = 4000`
