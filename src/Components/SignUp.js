@@ -42,7 +42,7 @@ const SignUp = () => {
             </div>
           </div>{" "}
           <div className="form-row">
-            <label htmlFor="username">Username: </label>
+            <label htmlFor="username">Username </label>
             <input type="email" placeholder="Username" />
           </div>
           <div className="form-row toggle" id="col-3">
