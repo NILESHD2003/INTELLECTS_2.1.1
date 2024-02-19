@@ -6,7 +6,7 @@ const blogSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  author: {
+  author_id: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
     tirm: true,
@@ -25,6 +25,7 @@ const blogSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category",
     trim: true,
+    required: true,
   },
   tags: {
     type: [String],
@@ -34,6 +35,12 @@ const blogSchema = new mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
+    },
+  ],
+  comments: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
     },
   ],
   createdAt: { type: Date, default: Date.now },
