@@ -191,14 +191,25 @@ form {
     grid-template-rows: auto 1fr;
     gap: 20px;
     input {
-      width: 70px;
-      margin: 0px 12px;
+      width: 50px;
+      margin: 0px 10px;
       height: 50px;
       background-color: grey;
       border-radius: 20px;
       /* background-color: #fff; */
     }
   }
+}
+.otp-btn{
+  margin-top: 20px;
+}
+.otp-button:hover{
+  background: #000;
+  color: yellow;
+}
+.otp-form{
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .post-container {
   max-width: 600px;
