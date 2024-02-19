@@ -4,7 +4,7 @@ export const dumy = [
     first_name: "Marcy",
     desc: "Supplement Left Mandible with Synthetic Substitute, Open Approach",
     image:
-      "https://www.kasandbox.org/programming-images/avatars/spunky-sam.png",
+      "https://i.pinimg.com/originals/42/88/0e/42880e123045f612647a10880cb45cc9.jpg",
     compnay: "Zoonder",
     title: "Financial Advisor",
   },

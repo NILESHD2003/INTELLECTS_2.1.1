@@ -46,18 +46,7 @@ const SignUp = () => {
             <input type="email" placeholder="Username" />
           </div>
           <div className="form-row toggle" id="col-3">
-            {/* <h1>Gender Toggle Example</h1> */}
-            {/* <GenderToggle /> */}
-
             <h3>Gender</h3>
-            {/* <div className="flex items-center ">
-              <input type="checkbox" id="male" name="gender" />
-              <span class=" text-gray-700">Male</span>
-            </div>
-            <div className="flex items-center space-x-4 ">
-              <input type="checkbox" id="female" name="gender" />
-              <span class="ml-2 text-gray-700">Female</span>
-            </div> */}
             <GenderToggle />
           </div>{" "}
           <div className="form-row">
