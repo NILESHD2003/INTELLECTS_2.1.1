@@ -1,13 +1,422 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* background-color: #000814; */
+  background-color: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.4rem;
+  color: white;
+}
+p {
+  font-weight: 300;
+  /* font-size: 24px; */
+  color: white;
+}
+span {
+  color: white;
+}
+.navbar {
+  ul {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    li {
+      width: 100%;
+    }
+  }
+}
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  .main_login {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    .form-row {
+      color: white;
+      text-align: start;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-rows: auto auto;
+      label {
+        font-size: larger;
+        margin-bottom: 10px;
+      }
+      input {
+        width: 25vw;
+        background-color: rgb(44 51 63);
+        border-radius: 20px;
+        color: white;
+        padding: 10px;
+      }
+    }
+  }
+}
+.post_Outerbody {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Navbar {
+  height: fit-content;
+  width: fit-content;
+}
+.post_body {
+  display: grid;
+  width: 30vw;
+  text-align: start;
+  padding: 10px;
+  grid-template-rows: 1fr auto auto 1fr;
+}
+.log-in {
+  margin: auto;
+  /* display: flex; */
+  /* justify-content: end; */
+  padding-right: 20px;
+  color: yellow;
+}
+.btn {
+  width: auto;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+btn:hover {
+  color: white;
+  background-color: rgb(135, 135, 61);
+}
+btn:focus {
+  background-color: yellow;
+}
+form {
+  width: fit-content;
+  margin: auto;
+}
+#col-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  div {
+    input {
+      width: 200px;
+    }
+  }
+}
+
+#col-3 {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 20px;
+  align-items: center;
+}
+
+/* GenderToggle.css */
+
+.gender-toggle {
+  display: flex;
+  cursor: pointer;
+  border-radius: 20px; /* Adjust the border-radius as needed */
+  overflow: hidden; /* Ensure the rounded corners are visible */
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 12px; /* Adjust the padding as needed */
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gender-toggle.male .toggle-option:nth-child(1),
+.gender-toggle.female .toggle-option:nth-child(2) {
+  background-color: #3490dc;
+  color: #fff;
+  border: 2px solid #3490dc;
+}
+
+.gender-toggle.female .toggle-option:nth-child(1),
+.gender-toggle.male .toggle-option:nth-child(2) {
+  background-color: black;
+  color: #fff;
+  border: 2px solid black;
+}
+
+.body {
+  height: 200px;
+}
+
+.Post_body {
+  display: grid;
+  width: 500px;
+  grid-template-rows: auto auto 1fr;
+  .info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .body {
+    padding: 30px;
+    height: fit-content;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    input {
+      width: 70px;
+      margin: 0px 12px;
+      height: 50px;
+      background-color: grey;
+      border-radius: 20px;
+      /* background-color: #fff; */
+    }
+  }
+}
+.post-container {
+  max-width: 600px;
+  margin: 20px auto;
+  /* background-color: #fff; */
+  /* border: 1px solid #e0e0e0; */
+  border-top: 2px solid #e0e0e0; /* Top border with a thickness of 2px and color #333 */
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  /* border-bottom: 1px solid #e0e0e0; */
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  border: 0.5px solid white;
+  border-radius: 10px;
+  max-height: 600px;
+  object-fit: cover;
+}
+.username,
+.desc {
+  color: white;
+}
+.post-caption {
+  padding: 16px;
+}
+.User_Info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  .info {
+    border: 2px solid blue;
+    background-color: blue;
+    height: 500px;
+    width: 700px;
+    border-radius: 20px;
+    gap: 20px;
+    padding: 10px;
+    div {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: grid;
+      border-radius: 20px;
+      border: 2px solid white;
+      grid-template-columns: auto auto;
+      justify-content: center;
+      align-items: center;
+      .startup {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        right: 30px;
+        background-color: white;
+        background-image: url("../src/img/startup-icon-trendy-startup-logo-concept-white-background-fr-startup-icon-trendy-startup-logo-concept-white-background-131195215.jpg");
+        background-size: cover; /* or 'contain' for different behavior */
+        background-repeat: no-repeat;
+      }
+      .enter {
+        position: absolute;
+        left: 30px;
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        background-image: url("../src/img/entrepreneur-icon-dealmaker-163600069.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      cursor: pointer;
+      .btn {
+        position: absolute;
+        bottom: 10px;
+        left: 80px;
+        width: 120px;
+        padding: 15px;
+        border-radius: 15px;
+        height: 50px;
+        background-color: green;
+      }
+      font-size: 18px;
+      color: white;
+    }
+
+    .startup:hover,
+    .enter:hover,
+    .opacity {
+      opacity: 0.5;
+    }
+  }
+}
+
+.bg-red {
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+  width: 120px;
+  height: 50px;
+  background-color: rgb(1, 186, 1);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+#post {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  background-color: yellow;
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+}
+
+.Home_outer {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+}
+.vertical-menu {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  width: fit-content;
+  border-right: solid white;
+  border-right-width: 1px;
+  margin: 50px 10px 0px 5px;
+  padding-right: 60px;
+  height: 100vh;
+  min-width: 220px;
+  background-color: black;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+}
+.vertical-menu div img {
+  max-width: 250px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: fit-content;
+}
+.menu-item {
+  /* display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s; */
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-icon:hover,
+.menu-label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.likes svg:hover {
+  color: rgba(255, 255, 255, 0.1);
+}
+.menu-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #262626;
+  svg {
+    color: white;
+  }
+}
+
+.menu-label {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.red,
+.red:hover {
+  color: red;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog {
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
